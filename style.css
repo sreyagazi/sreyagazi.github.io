@@ -1,9 +1,42 @@
+:root {
+    --title: #ff5ea4 ;
+    --bg: #ffd5ee ;
+    --border: #fe82b9 ;
+    --red: #ff2b2f ;
+    --blue: #00bbd4 ;
+    --green: #8cc63f ;
+    --white: #f5f5f5 ;
+    --black: #1d1d1b ;
+    --filter:brightness(1.0) hue-rotate(55deg);
+}
+
+@font-face {
+  font-family: 'Tangkiwood';
+  src: url('tangkiwood.ttf');
+}
+
+@font-face {
+  font-family: 'Basiic';
+  src: url('basiic.ttf');
+}
+
 body,
 html {
   margin: 0;
   padding: 0;
-  background:#FFD5EE;
+  background:var(--bg);
+  font-family: "Basiic", sans-serif;
+  color: var(--red);
 }
+
+body, border, .footer {
+  cursor: url(https://www.rw-designer.com/cursor-view/174845.png) 8 8, auto !important;
+}
+
+a, a img, .header {
+  cursor: url(https://www.rw-designer.com/cursor-view/174842.png) 8 8, auto !important;
+}
+
 * {
   touch-action: manipulation;
 }
@@ -31,13 +64,92 @@ body {
   display: block;
 }
 
+.gallery a{
+  font-family: 'Basiic', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size:1rem;
+  letter-spacing:;
+  padding: 0 2px;
+  margin: 0;
+  background: var(--white);
+  color: var(--title);
+  border: 1px solid;
+}
+
+h2{
+  text-align:center;
+  font-family: 'Tangkiwood' ;
+  color: var(--red);
+  letter-spacing: 1px;
+  padding:10px;
+  font-size:2rem;
+}
+
+h2:before{
+ content:url('https://cinni.net/images/icon/wing_r.png');
+ padding-right:5px;
+ filter:var(--filter);
+}
+
+h2:after{
+ content:url('https://cinni.net/images/icon/wing_l.png');
+ padding-left:5px;
+  filter:var(--filter);
+}
+
+h3:before{
+content:' ☆  ';
+}
+h3{
+  padding-left:10px;
+}
+
+h3{
+margin:0;
+padding:2px 5px;
+border-bottom:1px solid var(--black); 
+color:#fe82b9;
+}
+
+h3:before{
+    content:url('https://cinni.net/images/adopt/lilstar.png');
+    padding:0 5px 0 0;
+}
+
+.pink{
+    background:#ffbfbf;
+}
+.orange{
+    background:#ffd7ae;
+}
+.yellow{
+    background:#fff2a5;
+}
+.green{
+    background:#e6ff7b;
+}
+.blue{
+    background:#ebfced;
+}
+.purple{
+    background:#dcccff;
+}
+
+#header {
+     max-width:1000px;
+     height:215px;
+     margin:0 auto;
+}
+
 .loading {
   position: fixed;
   z-index: 50;
   width: 100%;
   height: 100%;
   top: 0; left: 0;
-  background: #f1f1f1;
+  background: var(--white);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,7 +196,7 @@ background: linear-gradient(180deg, rgba(255,211,236,1) 65%, rgba(255,255,255,0)
   display: block;
   z-index: 100;
   /*top: 2em; left: 2em;*/
-  padding-top: 20px;
+  padding-top: 0 auto;
   margin-left: auto;
   margin-right: auto;
   /*tranform: translateX(-50%);*/
@@ -141,4 +253,34 @@ background: linear-gradient(180deg, rgba(255,211,236,1) 65%, rgba(255,255,255,0)
 	min-block-size: unset !important;
 	overflow: unset !important;
 }
+  
+#contact-form {
+  max-width: 500px;
+  margin: 2em auto;
+  background: #fafafa;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+label { font-weight: bold; }
+input, textarea {
+  padding: 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+button {
+  padding: 0.8em;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+}
+button:hover { background: #1565c0; }
 }
