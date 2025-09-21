@@ -8,82 +8,92 @@
         <link href="sphinxie.svg" rel="shortcut icon">
         <link rel="stylesheet" href="style.css">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <style>  
-    .nav-portfolio{
-      position:absolute;
-      top:-375px;
-      left:200px;
-    }
-    .nav-projects{
-      position:absolute;
-      top:-175px;
-      left:300px;
-    }
-    .nav-about{
-      position:absolute;
-      top:-340px;
-      left:850px;
-    }
-    .nav-shop{
-      position:absolute;
-            top:-120px;
-      left:725px;
-    }
-    
-   @media only screen and (max-width: 600px) {
-     .nav-portfolio{
-      top:-300px;
-      left:0;
-    }
-    .nav-projects{
-     top:-100px;
-      left:0;
-    }
-    .nav-about{
-      top:-270px;
-      left:215px;
-    }
-    .nav-shop{
-      top:-50px;
-      left:215px;
-    }
-    :is([id*='google_ads_iframe'],[id*='taboola-'],.taboolaHeight,.taboola-placeholder,#top-ad,#credential_picker_container,#credentials-picker-container,#credential_picker_iframe,[id*='google-one-tap-iframe'],#google-one-tap-popup-container,.google-one-tap__module,.google-one-tap-modal-div,#amp_floatingAdDiv,#ez-content-blocker-container) {
-        display:none!important;min-height:0!important;height:0!important;}
-    </style>
     </head>
+  
+     <style>
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  margin: 2em auto;
+  max-width: 950px;
+}
+.gallery-item {
+  width: 100%;
+  height: 290px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.2s;
+  object-fit: cover;
+}
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center; align-items: center;
+}
+.modal-content {
+  max-width: 90vw; max-height: 80vh;
+  margin: auto;
+  display: block;
+}
+.close {
+  position: absolute;
+  top: 24px;
+  right: 40px;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  font-weight: bold;
+}
+#caption {
+  color: #fff;
+  text-align: center;
+  margin-top: 0.5em;
+}
+    </style>
     <body>
-        <div class="wrapper"></div>
-        <center>
-        <a href="/index.html">
-            <img class="header" src="sreyagazi.gif"></a></center>
-        <div class="footer">
+      <div id="header">
+        <a href="https://sreyagazi.com"><img class="header" src="sreyagazi.gif"></a>
+      </div>
+         <div class="wrapper"></div>
         <center> 
-            <div class="nav-portfolio">
-            <a href="https://sreyagazi.com/portfolio/">
-                <img src="portfolio.png" width="200">
-                <br>
-                <h1 width="200" height="50">Portfolio</h1></a></div>
-            <div class="nav-projects">
-            <a href=https://sreyagazi.com/projects/>
-                <img src="projects.png" width="200">
-                <br>
-                <h1 width="200" height="50">Projects</h1></div>
-            <div class="nav-about">
-            <a href="https://sreyagazi.com/about">
-                <img src="about.png" width="200">
-                <br>
-                <h2 width="200" height="50">About</h2></a></div>
-            <div class="nav-shop">
-            <a href="https://sreyagazi.com/shop">
-                <img src="shop.png" width="200">
-                <br>
-                <h2 width="200" height="50">Shop</h2></a></div>
-            </center>
-        </div>
-    <script src="https://michelleselwa.com/test/m/three.min.js"></script>
-        <script src="https://michelleselwa.com/test/m/GLTFLoader.js"></script>
-        <canvas id="c" width="3456" height="50"></canvas>
-        <script data-goatcounter="https://michelleselwa.goatcounter.com/count" async=""
-        src="//gc.zgo.at/count.js"></script>
-    </body>
+    <h2>Animation Portfolio</h2></center>
+  <div class="gallery"> 
+    <a href="https://sreyagazi.com/2D-Animation"><img src="/gallery/2D.png" alt="2D Animation" class="gallery-item">2D Animation</a>
+    <a href="https://sreyagazi.com/3D-Animation"><img src="/gallery/3D.png" alt="3D Animation" class="gallery-item">3D Animation</a>
+    <a href="https://sreyagazi.com/3D-Modelling"><img src="/gallery/3DModel.png" alt="3D Modelling" class="gallery-item">3D Modelling</a>
+    <a href="https://sreyagazi.com/Character-Design"><img src="/gallery/Char.JPG" alt="Character Design" class="gallery-item">Character Design</a>
+    <a href="https://sreyagazi.com/Environment-Design"><img src="projects.png" alt="Environment Design" class="gallery-item">Environment Design</a>
+    <a href="https://sreyagazi.com/Background-Illustration"><img src="/gallery/BGI.PNG" alt="Background Illustration" class="gallery-item">Background Illustration</a>
+    <a href="https://sreyagazi.com/Illustration"><img src="/gallery/illustration.JPG" alt="Illustration" class="gallery-item">Illustration</a>
+    <a href="https://sreyagazi.com/Perspective-Drawing"><img src="/gallery/Persp.JPG" alt="Perspective Drawing" class="gallery-item">Perspective Drawing</a>
+    <a href="https://sreyagazi.com/Paintings"><img src="Gallery/Paint.JPG" alt="Paintings" class="gallery-item">Paintings</a>
+    <a href="https://sreyagazi.com/Animal-Studies"><img src="/gallery/Animal.jpg" alt="Animal Studies" class="gallery-item">Animal Studies</a>
+    <a href="https://sreyagazi.com/Project-Development"><img src="/gallery/proj.jpg" alt="Project Development" class="gallery-item">Project Development</a>
+    <a href="https://sreyagazi.com/Storyboards"><img src="/gallery/SB.JPG" alt="Storyboarding" class="gallery-item">Storyboards</a>
+    <a href="https://sreyagazi.com/Life-Drawing"><img src="/gallery/LD.jpg" alt="Life Drawing" class="gallery-item">Life Drawing</a>
+    <a href="https://sreyagazi.com/Observational-Drawing"><img src="/gallery/OD.png" alt="Observational Drawing" class="gallery-item">Observational Drawing</a>
+    <a href="https://sreyagazi.com/Prop-Design"><img src="projects.png" alt="Prop Design" class="gallery-item">Prop Design</a>
+    <!-- add more images as needed -->
+  </div>
+
+  <!-- Modal for enlarged images -->
+  <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img">
+    <div id="caption"></div>
+  </div>
+  <script src="gallery.js"></script>
+    
+  <div id="footer">ㅤ
+    <center>© Sreya Gazi ☆ 2025ㅤ</center>ㅤ</div>
+  </body>
 </html>
