@@ -26,10 +26,10 @@ html {
   padding: 0;
   background:var(--bg);
   font-family: "Basiic", sans-serif;
-  color: var(--red);
+  color: var(--black);
 }
 
-body, border, .footer {
+body, .footer {
   cursor: url(https://www.rw-designer.com/cursor-view/174845.png) 8 8, auto !important;
 }
 
@@ -67,6 +67,7 @@ body {
 .gallery a{
   font-family: 'Basiic', sans-serif;
   text-align: center;
+  letter-spacing: 1px;
   text-decoration: none;
   font-weight: bold;
   font-size:1rem;
@@ -77,7 +78,26 @@ body {
   color: var(--title);
   border: 1px solid;
 }
-
+ #section-title {
+     text-align:center;
+     font-weight:bold;
+     padding-top:7px;
+     padding-bottom:7px;
+     background-color:var(--title);
+     color:var(--white);
+     border-radius:25px;
+}
+ #main {
+     border-radius:25px;
+     width:1000px;
+     height:auto;
+     background-color:var(--white);
+}
+#content {
+  padding: 10px;
+  align-content: center;
+  text-align: justify;
+}
 h2{
   text-align:center;
   font-family: 'Tangkiwood' ;
@@ -110,7 +130,10 @@ h3{
 margin:0;
 padding:2px 5px;
 border-bottom:1px solid var(--black); 
-color:#fe82b9;
+color:var(--black);
+text-align: left;
+font-family: 'Tangkiwood', sans-serif;
+font-size: x-large;
 }
 
 h3:before{
@@ -210,12 +233,12 @@ background: linear-gradient(180deg, rgba(255,211,236,1) 65%, rgba(255,255,255,0)
   /*top: 2em; left: 2em;*/
   padding-bottom: 0;
   bottom: 0;
-  margin-top: 30%;
   margin-left: auto;
   margin-right: auto;
   /*tranform: translateX(-50%);*/
   font-weight: bold;
   width:1200px;
+  color: var(--red);
 }
 
 @media only screen and (max-width: 600px) {
@@ -239,6 +262,7 @@ background: linear-gradient(180deg, rgba(255,211,236,1) 65%, rgba(255,255,255,0)
   margin-left: auto;
   margin-right: auto;
   font-weight: bold;
+  cursor: url(https://www.rw-designer.com/cursor-view/174845.png) 8 8, auto !important;
 }
         
 @mixin reset {
